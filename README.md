@@ -109,6 +109,8 @@ void overlayMain() {
   ///
   /// `enableDrag` to enable/disable dragging the overlay over the screen and default is "false"
   ///
+  /// `dragThreshold` to determine how easy it is to start dragging the overlay and default is 5 (device independant pixels)
+  ///
   /// `positionGravity` the overlay postion after drag and default is [PositionGravity.none]
   ///
   /// `startPosition` the overlay start position and default is null

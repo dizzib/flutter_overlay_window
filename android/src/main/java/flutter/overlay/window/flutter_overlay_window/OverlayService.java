@@ -387,7 +387,7 @@ public class OverlayService extends Service implements View.OnTouchListener {
                 case MotionEvent.ACTION_MOVE:
                     float dx = event.getRawX() - lastX;
                     float dy = event.getRawY() - lastY;
-                    if (!dragging && dx * dx + dy * dy < 25) {
+                    if (!dragging && dx * dx + dy * dy < Math.pow(dpToPx(WindowSetup.dragThreshold), 2)) {
                         return false;
                     }
                     lastX = event.getRawX();

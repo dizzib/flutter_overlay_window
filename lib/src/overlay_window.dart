@@ -48,6 +48,7 @@ class FlutterOverlayWindow {
     String overlayTitle = "overlay activated",
     String? overlayContent,
     bool enableDrag = false,
+    int dragThreshold = 5,
     PositionGravity positionGravity = PositionGravity.none,
     OverlayPosition? startPosition,
   }) async {
@@ -61,6 +62,7 @@ class FlutterOverlayWindow {
         "overlayTitle": overlayTitle,
         "overlayContent": overlayContent,
         "enableDrag": enableDrag,
+        "dragThreshold": dragThreshold,
         "notificationVisibility": visibility.name,
         "positionGravity": positionGravity.name,
         "startPosition": startPosition?.toMap(),

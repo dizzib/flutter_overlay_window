@@ -140,6 +140,11 @@ public class OverlayService extends Service implements View.OnTouchListener {
                 int height = call.argument("height");
                 boolean enableDrag = call.argument("enableDrag");
                 resizeOverlay(width, height, enableDrag, result);
+            /// https://github.com/X-SLAYER/flutter_overlay_window/issues/149
+            } else if (call.method.equals("openMainApp")) {
+                intent.setClassName("com.example.fast_mute", "com.example.fast_mute.MainActivity");
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
             }
         });
         overlayMessageChannel.setMessageHandler((message, reply) -> {
